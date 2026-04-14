@@ -6,21 +6,17 @@ using System.Threading.Tasks;
 
 namespace Fnance.Domain.Entities
 {
-    public class User
+    public class Category
     {
         public Guid Id { get; private set; }
         public string Name { get; private set; }
 
-        public string Email { get; private set; }
-
-        public string PasswordHash { get; private set; }
-
-        public User(string name, string email, string passwordHash)
+        public Category(string name)
         {
             Id = Guid.NewGuid();
+
             Name = name;
-            Email = email;
-            PasswordHash = passwordHash;
+            
         }
     }
 }
